@@ -1,0 +1,10 @@
+<div class='button-center' *ngIf='!hasAccount'>
+  <button (click) = "getAllProviders()">Connect</button>
+</div>
+<div class='button-center' *ngIf='hasAccount'>
+  <label for="balance">Balance: </label>
+  <input id="balance" type="text" [(ngModel)] = 'account.balance'><br>
+  <label for="currency">Currency: </label>
+  <input id="currency" type="text" [(ngModel)] = 'account.currency'><br>
+  <button (click)="goBack()">Back</button>
+</div>

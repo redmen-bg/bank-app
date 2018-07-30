@@ -1,0 +1,6 @@
+<div>
+  <select [(ngModel)]="provider">
+    <option *ngFor="let prov of providers;" [ngValue]="prov.provider">{{prov.name}}</option>
+  </select><br>
+  <button (click) = "getUrl()">Connect</button>
+</div>
